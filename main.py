@@ -2,10 +2,10 @@
 basic.show_icon(IconNames.HAPPY)
 # reads the value from the moisture sensor (analog pin 1) and assigns it to the moisture_sensor_reading
 moisture_sensor_reading = pins.analog_read_pin(AnalogPin.P1)
-# sets mode value to 0 (default mode)
-mode = 0
 # clears led screen
 basic.clear_screen()
+# sets mode value to 0 (default mode)
+mode = 0
 # controls
 
 def on_forever():
@@ -39,7 +39,7 @@ def on_forever2():
         # displays debug mode intro
         basic.show_string("DEBUG MODE ENABLED")
         # displays moisture sensor reading
-        basic.show_string("the moisture sensor reading is: " + str(pins.analog_read_pin(AnalogPin.P0)))
+        basic.show_string("the moisture sensor reading is: " + ("" + str(pins.analog_read_pin(AnalogPin.P0))))
         # turns led (digital pin 0) off
         pins.digital_write_pin(DigitalPin.P0, 0)
         # shows led off message

@@ -2,10 +2,10 @@
 basic.showIcon(IconNames.Happy)
 //  reads the value from the moisture sensor (analog pin 1) and assigns it to the moisture_sensor_reading
 let moisture_sensor_reading = pins.analogReadPin(AnalogPin.P1)
-//  sets mode value to 0 (default mode)
-let mode = 0
 //  clears led screen
 basic.clearScreen()
+//  sets mode value to 0 (default mode)
+let mode = 0
 //  controls
 basic.forever(function on_forever() {
     
@@ -43,7 +43,7 @@ basic.forever(function on_forever2() {
         //  displays debug mode intro
         basic.showString("DEBUG MODE ENABLED")
         //  displays moisture sensor reading
-        basic.showString("the moisture sensor reading is: " + ("" + pins.analogReadPin(AnalogPin.P0)))
+        basic.showString("the moisture sensor reading is: " + ("" + ("" + pins.analogReadPin(AnalogPin.P0))))
         //  turns led (digital pin 0) off
         pins.digitalWritePin(DigitalPin.P0, 0)
         //  shows led off message
